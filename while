@@ -1,0 +1,5 @@
+while IFS=: read user lixo id lixo; 
+do echo -e  "$((++r))\t$user\t$id"
+((r%10 == 0)) && read < /dev/tty
+done < /etc/passwd 
+echo listei =$r= registros
